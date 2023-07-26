@@ -1,0 +1,24 @@
+package entities;
+
+public class Worker {
+	String name;
+	WorkerLevel level;
+	Double baseSalary;
+	
+	public Worker(String name, WorkerLevel level, Double baseSalary) {
+		this.name = name;
+		this.level = level;
+		this.baseSalary = baseSalary;
+	}
+	
+	public void addContract(HourContract contract) {
+		
+	}
+	
+public void addContract(HourContract contract) {
+		
+	}
+public void addContract(HourContract contract) {
+	
+}
+}

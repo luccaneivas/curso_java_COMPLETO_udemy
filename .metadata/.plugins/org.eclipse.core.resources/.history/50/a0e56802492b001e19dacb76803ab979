@@ -1,0 +1,54 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.IndividualTaxPayer;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of tax payers: ");
+		int noOfTaxPayers = sc.nextInt();
+		sc.nextLine();
+		
+		List<TaxPayer> taxPayers = new ArrayList<>();
+		
+		for (int i = 0; i < noOfTaxPayers; i++) {
+			System.out.println("Tax payer #" + (i + 1) + " data:");
+			System.out.print("Individual or company (i/c)? ");
+			char option = sc.nextLine().charAt(0);
+			
+			System.out.print("Name: ");
+			String name = sc.nextLine();
+			System.out.print("Annual income: ");
+			Double annualIncome = sc.nextDouble();
+			sc.nextLine();
+			
+			if (option == 'i') {
+				System.out.print("Health expenditures: ");
+				Double healthExpenditures = sc.nextDouble();
+				sc.nextLine();
+				
+				taxPayers.add(new IndividualTaxPayer(name, annualIncome, healthExpenditures));
+			} else {
+				Employee emp = new Employee(name, hours, valuePerHour);
+				employees.add(emp);
+			}
+		}
+		
+		System.out.println("PAYMENTS:");
+		for (Employee emp : employees) {
+			System.out.println(emp.toString());
+		}
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,9 @@
+package entities;
+
+import java.util.Date;
+
+public class HourContract {
+	Date date;
+	Double valuePerHour;
+	Integer hours;
+}

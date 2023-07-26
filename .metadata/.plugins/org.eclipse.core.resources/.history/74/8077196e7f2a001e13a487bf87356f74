@@ -1,0 +1,16 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+
+	private Date moment;
+	private OrderStatus status;
+	
+	List<OrderItem> items = new ArrayList<>();
+	List<Client> clients = new ArrayList<>();
+	
+	public Order() {}
+}

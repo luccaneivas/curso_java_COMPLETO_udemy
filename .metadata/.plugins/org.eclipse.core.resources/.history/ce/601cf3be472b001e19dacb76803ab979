@@ -1,0 +1,35 @@
+package entities;
+
+public class IndividualTaxPayer extends TaxPayer {
+
+	private Double healthExpeditures;
+	
+	public IndividualTaxPayer() {
+		super();
+	}
+	
+	public IndividualTaxPayer(String name, Double anualIncome, Double healthExpeditures) {
+		super(name, anualIncome);
+		this.healthExpeditures = healthExpeditures;
+	}
+
+	public Double getHealthExpeditures() {
+		return healthExpeditures;
+	}
+
+	public void setHealthExpeditures(Double healthExpeditures) {
+		this.healthExpeditures = healthExpeditures;
+	}
+
+	@Override
+	public Double TaxPaid() {
+		Double tax;
+		
+		if (super.getAnualIncome() < 20000.00) {
+			tax = 0.15;
+		} else {
+			tax = 0.25;
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.CompanyTaxPayer;
+import entities.IndividualTaxPayer;
+import entities.TaxPayer;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of tax payers: ");
+		int noOfTaxPayers = sc.nextInt();
+		sc.nextLine();
+		
+		List<TaxPayer> taxPayers = new ArrayList<>();
+		
+		for (int i = 0; i < noOfTaxPayers; i++) {
+			System.out.println("Tax payer #" + (i + 1) + " data:");
+			System.out.print("Individual or company (i/c)? ");
+			char option = sc.nextLine().charAt(0);
+			
+			System.out.print("Name: ");
+			String name = sc.nextLine();
+			System.out.print("Annual income: ");
+			Double annualIncome = sc.nextDouble();
+			sc.nextLine();
+			
+			if (option == 'i') {
+				System.out.print("Health expenditures: ");
+				Double healthExpenditures = sc.nextDouble();
+				sc.nextLine();
+				
+				taxPayers.add(new IndividualTaxPayer(name, annualIncome, healthExpenditures));
+			} else {
+				System.out.print("Number of employees: ");
+				int noOfEmployees = sc.nextInt();
+				sc.nextLine();
+				
+				taxPayers.add(new CompanyTaxPayer(name, annualIncome, noOfEmployees));
+			}
+		}
+		
+		System.out.println("TAXES PAID:");
+		for (TaxPayer taxPayer : taxPayers) {
+			System.out.println(taxPayer.toString());
+		}
+		
+		sc.close();
+	}
+
+}

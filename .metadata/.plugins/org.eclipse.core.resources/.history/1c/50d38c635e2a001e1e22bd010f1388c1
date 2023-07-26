@@ -1,0 +1,30 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Worker {
+	String name;
+	WorkerLevel level;
+	Double baseSalary;
+	Department department;
+	List<HourContract> contracts = new ArrayList<>();
+	
+	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+		this.name = name;
+		this.level = level;
+		this.baseSalary = baseSalary;
+	}
+	
+	public void addContract(HourContract contract) {
+		
+	}
+	
+	public void removeContract(HourContract contract) {
+		
+	}
+	
+	public Double income(Integer year, Integer month) {
+			
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="entities.CurrencyConverter"/>
+    <fullyQualifiedTypeName name="entities.Account"/>
+    <fullyQualifiedTypeName name="entities.student"/>
+    <fullyQualifiedTypeName name="entities.Student"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="entities.Client"/>
+    <fullyQualifiedTypeName name="entities.Order"/>
+    <fullyQualifiedTypeName name="entities.OrderStatus"/>
+    <fullyQualifiedTypeName name="entities.OrderItem"/>
+    <fullyQualifiedTypeName name="entities.OutsourcedEmployee"/>
+    <fullyQualifiedTypeName name="entities.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="entities.UsedProduct"/>
+    <fullyQualifiedTypeName name="entities.ImportedProduct"/>
+    <fullyQualifiedTypeName name="entities.Product"/>
+    <fullyQualifiedTypeName name="entities.TaxPayer"/>
+    <fullyQualifiedTypeName name="entities.IndividualTaxPayer"/>
+    <fullyQualifiedTypeName name="entities.CompanyTaxPayer"/>
+</qualifiedTypeNameHistroy>

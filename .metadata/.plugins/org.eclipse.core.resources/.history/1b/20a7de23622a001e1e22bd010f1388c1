@@ -1,0 +1,55 @@
+package application;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Department;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter department's name: ");
+		String depto = sc.nextLine();
+		sc.nextLine();
+		
+		System.out.println("Enter worker data:");
+		sc.nextLine();
+		System.out.println("Name: ");
+		String name = sc.nextLine();
+		sc.nextLine();
+		System.out.println("Level: ");
+		String level = sc.nextLine();
+		sc.nextLine();
+		System.out.println("Base salary: ");
+		Double salary = sc.nextDouble();
+		
+		// instancia o usuario
+		Department newDepto = new Department(depto);
+		
+		System.out.println("How many contracts to this worker? ");
+		Integer noContracts = sc.nextInt();
+		
+		for (int i = 0; i < noContracts; i++) {
+			System.out.println("Enter contract " + i + "data:");
+			System.out.println("Date (DD/MM/YYYY): ");
+			String date = sc.nextLine();
+			System.out.println("Value per hour: ");
+			Double valuePerHour = sc.nextDouble();
+			System.out.println("Duration (hours): ");
+			Integer duration = sc.nextInt();
+			
+			// instancia o contrato e salva nos contratos
+		}
+		
+		System.out.println("Enter month and year to calculate income (MM/YYYY): ");
+		String date = sc.nextLine();
+		
+		// imprime o toString do worker
+		System.out.println("Income for " + date + ": "); // imprime o totalvalue do contract
+		
+		sc.close();
+	}
+
+}
